@@ -20,7 +20,7 @@
 		<tr>
 		 	<td><c:out value="${ movie.title }"/></td>
 		 	<td><c:out value="${ movie.year }"/></td>
-		 	<td><c:out value="${ movie.Type }"/></td>
+		 	<td><c:out value="${ movie.type }"/></td>
 		 </tr>	
 	</c:forEach>
 </table>

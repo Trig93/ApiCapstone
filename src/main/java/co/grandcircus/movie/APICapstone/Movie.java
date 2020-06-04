@@ -19,14 +19,15 @@ public class Movie {
 	private String title;
 	@JsonProperty(value = "Year")
 	private String year;
-	private String Type;
+	@JsonProperty(value= "Type")
+	private String type;
 
 	public String getType() {
-		return Type;
+		return type;
 	}
 
 	public void setType(String type) {
-		Type = type;
+		this.type = type;
 	}
 
 	public String getTitle() {
@@ -49,7 +50,7 @@ public class Movie {
 
 	@Override
 	public String toString() {
-		return "Movie [id=" + id + ", title=" + title + ", year=" + year + ", Type=" + Type + "]";
+		return "Movie [id=" + id + ", title=" + title + ", year=" + year + ", Type=" + type + "]";
 	}
 
 }
