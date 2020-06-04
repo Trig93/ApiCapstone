@@ -1,23 +1,25 @@
 package co.grandcircus.movie.APICapstone;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class MovieResponse {
 	
-	private Movie[] Search;
+	private List<Movie> Search;
 
-	public Movie[] getSearch() {
+	public List<Movie> getSearch() {
 		return Search;
 	}
 
-	public void setSearch(Movie[] search) {
+	public void setSearch(List<Movie> search) {
 		Search = search;
 	}
 
 	@Override
 	public String toString() {
-		return "MovieResponse [Search=" + Arrays.toString(Search) + "]";
+		return "MovieResponse [Search=" + Search + "]";
 	}
+
+	
 	
 
 }

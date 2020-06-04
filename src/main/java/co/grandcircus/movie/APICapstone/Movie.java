@@ -19,7 +19,6 @@ public class Movie {
 	private String title;
 	@JsonProperty(value = "Year")
 	private String year;
-	
 	private String Type;
 
 	public String getType() {

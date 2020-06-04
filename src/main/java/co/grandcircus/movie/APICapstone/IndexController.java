@@ -2,6 +2,8 @@ package co.grandcircus.movie.APICapstone;
 
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,7 +24,7 @@ public class IndexController {
 	@RequestMapping ("/s")
 	public String getByTitle(@RequestParam("s") String title, @RequestParam(required = false, name = "year") String year, 
 			@RequestParam(required = false, name = "type") String type, Model model) {
-		MovieResponse movies = service.getSearch(title);
+		List<Movie> movies = service.getSearch(title);
 		model.addAttribute("movies", movies);
 		
 		return "s";
