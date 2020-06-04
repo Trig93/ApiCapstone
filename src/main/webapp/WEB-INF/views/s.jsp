@@ -13,14 +13,14 @@
 	<tr> 
 		<th>Title</th>
 		<th>Year</th>
-		<th>Genre</th>
+		<th>Type</th>
 	</tr>
 		
 	<c:forEach items = "${ movies }" var = "movie">
 		<tr>
 		 	<td><c:out value="${ movie.title }"/></td>
 		 	<td><c:out value="${ movie.year }"/></td>
-		 	<td><c:out value="${ movie.genre }"/></td>
+		 	<td><c:out value="${ movie.Type }"/></td>
 		 </tr>	
 	</c:forEach>
 </table>

@@ -1,5 +1,7 @@
 package co.grandcircus.movie.APICapstone;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,13 +19,13 @@ public class IndexController {
 		return "index";
 	}
 	
-	@RequestMapping ("/t")
-	public String getByTitle(@RequestParam("t") String title, @RequestParam(required = false, name = "year") String year, 
+	@RequestMapping ("/s")
+	public String getByTitle(@RequestParam("s") String title, @RequestParam(required = false, name = "year") String year, 
 			@RequestParam(required = false, name = "type") String type, Model model) {
-		Movie[] movies = service.getMovieByTitle(title, type, year);
-		model.addAttribute("title", movies);
+		MovieResponse movies = service.getSearch(title);
+		model.addAttribute("movies", movies);
 		
-		return "t";
+		return "s";
 	}
 	
 	

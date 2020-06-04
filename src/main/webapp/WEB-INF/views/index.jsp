@@ -12,10 +12,10 @@
 </head>
 <body>
 <h1>Movie Api Capstone</h1>
-<form method="get" action="/t">
+<form method="get" action="/s">
 <h2>Search by title</h2>
 <label>Title:</label>
-<input type="text" name="t" required/>
+<input type="text" name="s" required/>
 <label>Year:</label>
 <input type="text" name="year" />
 <label>Type:</label>

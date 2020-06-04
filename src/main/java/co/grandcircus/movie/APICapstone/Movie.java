@@ -19,8 +19,7 @@ public class Movie {
 	private String title;
 	@JsonProperty(value = "Year")
 	private String year;
-	@JsonProperty(value = "Genre")
-	private String genre;
+	
 	private String Type;
 
 	public String getType() {
@@ -47,17 +46,11 @@ public class Movie {
 		this.year = year;
 	}
 
-	public String getGenre() {
-		return genre;
-	}
-
-	public void setGenre(String genre) {
-		this.genre = genre;
-	}
+	
 
 	@Override
 	public String toString() {
-		return "Movie [id=" + id + ", title=" + title + ", year=" + year + ", genre=" + genre + ", Type=" + Type + "]";
+		return "Movie [id=" + id + ", title=" + title + ", year=" + year + ", Type=" + Type + "]";
 	}
 
 }
