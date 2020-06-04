@@ -24,13 +24,9 @@ public class IndexController {
 	@RequestMapping ("/s")
 	public String getByTitle(@RequestParam("s") String title, @RequestParam(required = false, name = "year") String year, 
 			@RequestParam(required = false, name = "type") String type, Model model) {
-		List<Movie> movies = service.getSearch(title);
+		List<Movie> movies = service.getSearch(title, year, type);
 		System.out.println(movies);
 		model.addAttribute("movies", movies);
-		
 		return "s";
 	}
-	
-	
-
 }
