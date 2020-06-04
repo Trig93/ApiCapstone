@@ -9,6 +9,20 @@
 </head>
 <body>
 <h1>Test</h1>
-<p>${ title }</p>
+<table>
+	<tr> 
+		<th>Title</th>
+		<th>Year</th>
+		<th>Genre</th>
+	</tr>
+		
+	<c:forEach items = "${ movies }" var = "movie">
+		<tr>
+		 	<td><c:out value="${ movie.title }"/></td>
+		 	<td><c:out value="${ movie.year }"/></td>
+		 	<td><c:out value="${ movie.genre }"/></td>
+		 </tr>	
+	</c:forEach>
+</table>
 </body>
 </html>

@@ -14,15 +14,18 @@ public class IndexController {
 	
 	@RequestMapping ("/")
 	public String home(Model model) {
-		model.addAttribute("movie", service.getMovieByTitle(""));
 		return "index";
 	}
 	
 	@RequestMapping ("/t")
-	public String getByTitle(@RequestParam("t") String title, Model model) {
-		Movie movie = service.getMovieByTitle(title);
-		model.addAttribute("title", movie);
+	public String getByTitle(@RequestParam("t") String title, @RequestParam(required = false, name = "year") String year, 
+			@RequestParam(required = false, name = "type") String type, Model model) {
+		Movie[] movies = service.getMovieByTitle(title, type, year);
+		model.addAttribute("title", movies);
+		
 		return "t";
 	}
+	
+	
 
 }

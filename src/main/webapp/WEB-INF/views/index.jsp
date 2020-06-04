@@ -13,16 +13,14 @@
 <body>
 <h1>Movie Api Capstone</h1>
 <form method="get" action="/t">
-<label>Search by Title</label>
-<input type="text" name="t" /><a href="/t?title=${ movie.title }"><button>Submit</button></a>
-</form>
-<form method="get" action="/searchYear">
-<label>Search by Year</label>
-<input type="text" value="year" /><button type="button">Submit</button>
-</form>
-<form method="get" action="/searchGenre">
-<label>Search by Genre</label>
-<input type="text" value="genre" /><button type="button">Submit</button>
+<h2>Search by title</h2>
+<label>Title:</label>
+<input type="text" name="t" required/>
+<label>Year:</label>
+<input type="text" name="year" />
+<label>Type:</label>
+<input type="text" name="type">
+<button>Submit</button>
 </form>
 </body>
 </html>
