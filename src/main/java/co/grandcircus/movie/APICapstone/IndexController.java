@@ -45,10 +45,19 @@ public class IndexController {
 		repository.save(movie);
 		return ("redirect:/");
 	}
+	
 	@RequestMapping ("/watchlist/remove/{id}")
 	public String removeMovie(@PathVariable("id") Long id) {
 		repository.deleteById(id);
 		return "redirect:/watchlist";
+	}
+	
+	@RequestMapping ("/moreinfo")
+	public String getMoreInfo(@RequestParam("title") String title, Model model) {
+		Movie movie = service.getMoreInfo(title);
+		model.addAttribute("movie", movie);
+		System.out.println(movie);
+		return "moreinfo";
 	}
 	
 }

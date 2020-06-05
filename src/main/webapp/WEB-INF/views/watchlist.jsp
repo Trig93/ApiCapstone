@@ -26,7 +26,8 @@
 	    </tr>	
 	</c:forEach>
 </table>
-
+<h2>Back to Home</h2>
+<a href="/">Go</a>
 
 </body>
 </html>

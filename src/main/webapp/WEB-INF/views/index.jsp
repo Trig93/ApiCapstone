@@ -22,5 +22,7 @@
 <input type="text" name="type">
 <button>Submit</button>
 </form>
+<h2>Go to My Watchlist</h2>
+<a href="/watchlist">Go</a>
 </body>
 </html>

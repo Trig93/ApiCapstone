@@ -37,5 +37,11 @@ public class MovieApiService {
 		}
 		
 	}
+	
+	public Movie getMoreInfo (String title) {
+		String url = "http://www.omdbapi.com/?t={title}&apikey={key}";
+		Movie response = rest.getForObject(url, Movie.class, title, key);
+		return response;
+	}
 
 }

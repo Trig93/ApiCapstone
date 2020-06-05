@@ -29,7 +29,7 @@
 		 			<button>Add to Watch List</button>		
 		 		</form>
 			</td>
-		 	<td><a href="/movie-info?title=${movie.title}">More Info</a>
+		 	<td><a href="/moreinfo?t=${movie.title}">More Info</a>
 		 </tr>	
 	</c:forEach>
 	
