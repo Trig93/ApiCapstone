@@ -9,15 +9,23 @@
 </head>
 <body>
 <h1>Type test</h1>
-
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Year</th>
+		<th>Type</th>
+	
+	
+	</tr>
 	<c:forEach items = "${ movieList }" var = "movie">
 		<tr>
 		 	<td><c:out value="${ movie.title }"/></td>
 		 	<td><c:out value="${ movie.year }"/></td>
 		 	<td><c:out value="${ movie.type }"/></td>
-		 	<td><button>Remove</button>
+		 	<td><a href = "/watchlist/remove/${ movie.id }">Remove</a>
 	    </tr>	
 	</c:forEach>
+</table>
 
 
 </body>

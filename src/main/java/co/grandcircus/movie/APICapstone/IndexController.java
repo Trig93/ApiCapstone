@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -24,7 +25,7 @@ public class IndexController {
 	}
 	
 	@RequestMapping ("/listofmovies")
-	public String getByTitle(@RequestParam("s") String title, @RequestParam(required = false, name = "year") String year, 
+	public String getByTitle(@RequestParam(name = "s") String title, @RequestParam(required = false, name = "year") String year, 
 			@RequestParam(required = false, name = "type") String type, Model model) {
 		List<Movie> movies = service.getSearch(title, year, type);
 		model.addAttribute("movies", movies);
@@ -40,20 +41,14 @@ public class IndexController {
 	}
 	
 	@RequestMapping ("/movie-add")
-	public String addMovie(@RequestParam("movie") Movie movie) {
+	public String addMovie(Movie movie) {
 		repository.save(movie);
-		return ("redirect:/listofmovies");
+		return ("redirect:/");
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@RequestMapping ("/watchlist/remove/{id}")
+	public String removeMovie(@PathVariable("id") Long id) {
+		repository.deleteById(id);
+		return "redirect:/watchlist";
+	}
 	
 }

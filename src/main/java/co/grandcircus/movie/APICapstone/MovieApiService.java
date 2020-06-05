@@ -18,7 +18,7 @@ public class MovieApiService {
 	private RestTemplate rest = new RestTemplate();
 		
 	public List<Movie> getSearch (String search, String year, String type) {
-		if (year == null || year.isEmpty() && type == null || type.isEmpty()) {
+		if ((year == null || year.isEmpty()) && (type == null || type.isEmpty())) {
 			String url = "http://www.omdbapi.com/?s={search}&apikey={key}";
 			MovieResponse response = rest.getForObject(url, MovieResponse.class, search, key);
 			return response.getSearch();
@@ -26,7 +26,7 @@ public class MovieApiService {
 			String url = "http://www.omdbapi.com/?s={search}&y={year}&type={type}&apikey={key}";
 			MovieResponse response = rest.getForObject(url, MovieResponse.class, search, year, type, key);
 			return response.getSearch();
-		} else if (type != null && year == null || year.isEmpty() ) {
+		} else if ((type != null) && (year == null || year.isEmpty())) {
 			String url = "http://www.omdbapi.com/?s={search}&type={type}&apikey={key}";
 			MovieResponse response = rest.getForObject(url, MovieResponse.class, search, type, key);
 			return response.getSearch();
@@ -37,6 +37,5 @@ public class MovieApiService {
 		}
 		
 	}
-
 
 }

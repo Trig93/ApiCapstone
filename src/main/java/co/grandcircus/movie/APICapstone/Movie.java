@@ -21,6 +21,24 @@ public class Movie {
 	private String year;
 	@JsonProperty(value= "Type")
 	private String type;
+	@JsonProperty(value = "Plot")
+	private String info;
+	
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getType() {
 		return type;
@@ -45,9 +63,7 @@ public class Movie {
 	public void setYear(String year) {
 		this.year = year;
 	}
-
 	
-
 	@Override
 	public String toString() {
 		return "Movie id=" + id + ", title=" + title + ", year=" + year + ", Type=" + type + "";

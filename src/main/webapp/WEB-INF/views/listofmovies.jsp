@@ -21,7 +21,15 @@
 		 	<td><c:out value="${ movie.title }"/></td>
 		 	<td><c:out value="${ movie.year }"/></td>
 		 	<td><c:out value="${ movie.type }"/></td>
-		 	<td><a href="/movie-add?${movie}">Add</a></td>
+		 	<td>
+		 		<form action = "movie-add">
+		 			<input type="hidden" name = "title" value = "${movie.title}"/>
+		 			<input type="hidden" name = "year" value = "${movie.year}"/>
+		 			<input type="hidden" name = "type" value = "${movie.type}"/>
+		 			<button>Add to Watch List</button>		
+		 		</form>
+			</td>
+		 	<td><a href="/movie-info?title=${movie.title}">More Info</a>
 		 </tr>	
 	</c:forEach>
 	
