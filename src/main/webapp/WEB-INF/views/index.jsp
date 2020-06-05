@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Movie Api Capstone</h1>
-<form method="get" action="/s">
+<form method="get" action="/listofmovies">
 <h2>Search by title</h2>
 <label>Title:</label>
 <input type="text" name="s" required/>

@@ -26,13 +26,13 @@ public class MovieApiService {
 			String url = "http://www.omdbapi.com/?s={search}&y={year}&type={type}&apikey={key}";
 			MovieResponse response = rest.getForObject(url, MovieResponse.class, search, year, type, key);
 			return response.getSearch();
-		} else if (year != null && type == null || type.isEmpty()) {
-			String url = "http://www.omdbapi.com/?s={search}&y={year}&apikey={key}";
-			MovieResponse response = rest.getForObject(url, MovieResponse.class, search, year, key);
-			return response.getSearch();
-		} else {
+		} else if (type != null && year == null || year.isEmpty() ) {
 			String url = "http://www.omdbapi.com/?s={search}&type={type}&apikey={key}";
 			MovieResponse response = rest.getForObject(url, MovieResponse.class, search, type, key);
+			return response.getSearch();
+		} else {
+			String url = "http://www.omdbapi.com/?s={search}&y={year}&apikey={key}";
+			MovieResponse response = rest.getForObject(url, MovieResponse.class, search, year, key);
 			return response.getSearch();
 		}
 		

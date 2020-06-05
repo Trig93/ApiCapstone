@@ -21,8 +21,10 @@
 		 	<td><c:out value="${ movie.title }"/></td>
 		 	<td><c:out value="${ movie.year }"/></td>
 		 	<td><c:out value="${ movie.type }"/></td>
+		 	<td><a href="/movie-add?${movie}">Add</a></td>
 		 </tr>	
 	</c:forEach>
+	
 </table>
 </body>
 </html>

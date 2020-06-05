@@ -15,18 +15,45 @@ public class IndexController {
 	
 	@Autowired
 	private MovieApiService service;
+	@Autowired
+	private MovieDao repository;
 	
 	@RequestMapping ("/")
 	public String home(Model model) {
 		return "index";
 	}
 	
-	@RequestMapping ("/s")
+	@RequestMapping ("/listofmovies")
 	public String getByTitle(@RequestParam("s") String title, @RequestParam(required = false, name = "year") String year, 
 			@RequestParam(required = false, name = "type") String type, Model model) {
 		List<Movie> movies = service.getSearch(title, year, type);
-		System.out.println(movies);
 		model.addAttribute("movies", movies);
-		return "s";
+		return "listofmovies";
 	}
+	
+	@RequestMapping ("/watchlist")
+	public String getWatchlist(Model model) {
+		List <Movie> movieList = repository.findAll();
+		model.addAttribute("movieList", movieList);
+		return "watchlist";
+		
+	}
+	
+	@RequestMapping ("/movie-add")
+	public String addMovie(@RequestParam("movie") Movie movie) {
+		repository.save(movie);
+		return ("redirect:/listofmovies");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

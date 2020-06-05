@@ -5,13 +5,18 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Search by Type</title>
+<title>Watch List</title>
 </head>
 <body>
 <h1>Type test</h1>
 
-	<c:forEach items = "${ movies }" var = "movie">
-		<c:out value="${ movie.title }"/>
+	<c:forEach items = "${ movieList }" var = "movie">
+		<tr>
+		 	<td><c:out value="${ movie.title }"/></td>
+		 	<td><c:out value="${ movie.year }"/></td>
+		 	<td><c:out value="${ movie.type }"/></td>
+		 	<td><button>Remove</button>
+	    </tr>	
 	</c:forEach>
 
 
