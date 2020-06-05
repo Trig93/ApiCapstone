@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>More Information</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <body>
 <h1>More Info on ${movie.title}</h1>

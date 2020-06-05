@@ -6,33 +6,43 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Search by Title</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <body>
-<h1>Test</h1>
-<table>
-	<tr> 
-		<th>Title</th>
-		<th>Year</th>
-		<th>Type</th>
-	</tr>
-		
-	<c:forEach items = "${ movies }" var = "movie">
-		<tr>
-		 	<td><c:out value="${ movie.title }"/></td>
-		 	<td><c:out value="${ movie.year }"/></td>
-		 	<td><c:out value="${ movie.type }"/></td>
-		 	<td>
-		 		<form action = "movie-add">
-		 			<input type="hidden" name = "title" value = "${movie.title}"/>
-		 			<input type="hidden" name = "year" value = "${movie.year}"/>
-		 			<input type="hidden" name = "type" value = "${movie.type}"/>
-		 			<button>Add to Watch List</button>		
-		 		</form>
-			</td>
-		 	<td><a href="/moreinfo?title=${movie.title}">More Info</a>
-		 </tr>	
-	</c:forEach>
-	
-</table>
+<div class="container">
+		<h1>Movie List</h1>
+		<table class = "table">
+			<thead>
+				<tr> 
+					<th>Title</th>
+					<th>Year</th>
+					<th>Type</th>
+				</tr>
+			</thead>
+			<tbody>	
+				<c:forEach items = "${ movies }" var = "movie">
+					
+					<tr>
+					 	<td><c:out value="${ movie.title }"/></td>
+					 	<td><c:out value="${ movie.year }"/></td>
+					 	<td><c:out value="${ movie.type }"/></td>
+					 	<td>
+					 		<form action = "movie-add">
+					 			<input type="hidden" name = "title" value = "${movie.title}"/>
+					 			<input type="hidden" name = "year" value = "${movie.year}"/>
+					 			<input type="hidden" name = "type" value = "${movie.type}"/>
+					 			<button class="btn btn-secondary">Add to Watch List</button>		
+					 		</form>
+						</td>
+					 	<td><a class="btn btn-secondary" href="/moreinfo?title=${movie.title}">More Info</a>
+					 </tr>
+					 	
+				</c:forEach>
+			</tbody>
+			
+		</table>
+		<h2>Back to Home</h2>
+		<a class="btn btn-secondary" href="/">Go</a>
+</div>
 </body>
 </html>
