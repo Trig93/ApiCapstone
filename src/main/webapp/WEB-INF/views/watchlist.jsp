@@ -23,6 +23,7 @@
 		 	<td><c:out value="${ movie.year }"/></td>
 		 	<td><c:out value="${ movie.type }"/></td>
 		 	<td><a href = "/watchlist/remove/${ movie.id }">Remove</a>
+		 	<td><a href="/moreinfo?title=${movie.title}">More Info</a>
 	    </tr>	
 	</c:forEach>
 </table>

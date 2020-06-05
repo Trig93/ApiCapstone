@@ -9,5 +9,9 @@
 <body>
 <h1>More Info on ${movie.title}</h1>
 <p>${movie.info}</p>
+<h2>Back to Home</h2>
+<a href="/">Home</a>
+<h2>Back to Watchlist</h2>
+<a href="/watchlist">Watchlist</a>
 </body>
 </html>
