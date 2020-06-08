@@ -26,10 +26,10 @@
 		</ul>
 	</nav>
 
-	<div class="container">
-		<h1 align="center">Movie Api Capstone</h1>
+	<div class="container" align="center">
+		<h1>Movie Api Capstone</h1>
 		<form method="get" action="/listofmovies">
-		<h2 align="center">Search by Title</h2>
+		<h2>Search by Title</h2>
 		
 		<label>Title:</label>
 		<input type="text" name="s" required/>

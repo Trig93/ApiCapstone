@@ -55,11 +55,23 @@ public class IndexController {
 	}
 	
 	@RequestMapping ("/listofmovies")
-	public String getByTitle(@RequestParam(name = "s") String title, @RequestParam(required = false, name = "year") String year, 
+	public String getByTitle(@RequestParam(name = "s", required = false) String title, @RequestParam(required = false, name = "year") String year, 
 			@RequestParam(required = false, name = "type") String type, Model model) {
-		List<Movie> movies = service.getSearch(title, year, type);
-		model.addAttribute("movies", movies);
-		return "listofmovies";
+		if (title == null || title.isEmpty()) {
+			String search = session.getAttribute("title").toString();
+			String yearSearch = session.getAttribute("year").toString();
+			String typeSearch = session.getAttribute("type").toString();
+			List<Movie> movies = service.getSearch(search, yearSearch, typeSearch);
+			model.addAttribute("movies", movies);
+			return "listofmovies";
+		} else {
+			session.setAttribute("title", title);
+			session.setAttribute("year", year);
+			session.setAttribute("type", type);
+			List<Movie> movies = service.getSearch(title, year, type);
+			model.addAttribute("movies", movies);
+			return "listofmovies";
+		}
 	}
 	
 	@RequestMapping ("/watchlist")
@@ -81,7 +93,7 @@ public class IndexController {
 		user = userRepo.findById(user.getId()).get();
 		movie.setUser(user);
 		repository.save(movie);
-		return ("redirect:/");
+		return ("redirect:/listofmovies");
 	}
 	
 	@RequestMapping ("/watchlist/remove/{id}")
@@ -94,7 +106,6 @@ public class IndexController {
 	public String getMoreInfo(@RequestParam("title") String title, Model model) {
 		Movie movie = service.getMoreInfo(title);
 		model.addAttribute("movie", movie);
-		System.out.println(movie);
 		return "moreinfo";
 	}
 	@RequestMapping("/signup")
