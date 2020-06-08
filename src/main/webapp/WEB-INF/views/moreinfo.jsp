@@ -16,6 +16,19 @@
 </style>
 </head>
 <body>
+	<nav class="navbar bg-light">
+		<ul class="nav">
+			<li class="nav-item">
+			<a class="nav-link" href="/watchlist">My Watchlist</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="/">Login</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="/logout">Logout</a>
+			</li>
+		</ul>
+	</nav>
 <div class="container">
 <h1>More Info on ${movie.title}</h1>
 <p>${movie.info}</p>

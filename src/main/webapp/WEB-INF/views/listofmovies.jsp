@@ -9,7 +9,21 @@
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <body>
+	<nav class="navbar bg-light">
+		<ul class="nav">
+			<li class="nav-item">
+			<a class="nav-link" href="/watchlist">My Watchlist</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="/">Login</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="/logout">Logout</a>
+			</li>
+		</ul>
+	</nav>
 <div class="container">
+		
 		<h1>Movie List</h1>
 		<table class = "table">
 			<thead>

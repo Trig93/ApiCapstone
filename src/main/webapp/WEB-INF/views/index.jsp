@@ -2,8 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-   
-    
+     
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +12,20 @@
 
 </head>
 <body>
+	<nav class="navbar bg-light">
+		<ul class="nav">
+			<li class="nav-item">
+			<a class="nav-link" href="/watchlist">My Watchlist</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="/">Login</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="/logout">Logout</a>
+			</li>
+		</ul>
+	</nav>
+
 	<div class="container">
 		<h1 align="center">Movie Api Capstone</h1>
 		<form method="get" action="/listofmovies">
@@ -30,6 +43,7 @@
 		<h2>Go to My Watchlist</h2>
 		<a class="btn btn-secondary" href="/watchlist">Go</a>
 	</div>
+
 </body>
 
 </html>
