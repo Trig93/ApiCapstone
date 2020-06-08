@@ -37,8 +37,7 @@
 <a class="btn btn-secondary" href="/">Home</a>
 </div>
 
-<h2>Back to Watchlist</h2>
-<a class="btn btn-secondary" href="/watchlist">Watchlist</a>
+
 
 </div>
 

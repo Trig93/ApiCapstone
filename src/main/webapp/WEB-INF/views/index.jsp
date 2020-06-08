@@ -40,8 +40,7 @@
 		<button class="btn btn-secondary">Submit</button>
 		</form>
 		
-		<h2>Go to My Watchlist</h2>
-		<a class="btn btn-secondary" href="/watchlist">Go</a>
+		
 	</div>
 
 </body>

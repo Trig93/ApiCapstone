@@ -11,7 +11,7 @@
 <link href="/style.css" rel="stylesheet" />
 </head>
 <body>
-<%@ include file="partials/header.jsp" %>
+
 	<main class="container">
 
 		<article class="card mx-auto">
