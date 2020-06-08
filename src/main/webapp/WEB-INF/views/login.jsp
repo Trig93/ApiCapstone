@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Simple login page, must have an account to access the application -->
 <meta charset="UTF-8">
 <title>Login</title>
 <link href="/style.css" rel="stylesheet" />

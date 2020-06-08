@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Watchlist view, starts with nothing and populates with user selections. Nav bar only contains logout option. -->
 <meta charset="ISO-8859-1">
 <title>Watch List</title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -11,12 +12,7 @@
 <body>
 	<nav class="navbar bg-light">
 		<ul class="nav">
-			<li class="nav-item">
-			<a class="nav-link" href="/watchlist">My Watchlist</a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="/">Login</a>
-			</li>
+						
 			<li class="nav-item">
 			<a class="nav-link" href="/logout">Logout</a>
 			</li>
@@ -52,6 +48,7 @@
 		<h2>Back to Home</h2>
 		<a class="btn btn-secondary" href="/">Go</a>
 	</div>
+<!-- Alerts user that they are removing a movie from their watchlist -->	
 <script>
 function myRemoveAlert(){
 	alert ("You are removing this movie from your watchlist");

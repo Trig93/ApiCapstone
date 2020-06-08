@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+// Movie response class, handles searching for movies
 public class MovieResponse {
 	
 	@JsonProperty(value = "Search")

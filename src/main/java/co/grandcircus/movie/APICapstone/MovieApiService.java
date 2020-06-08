@@ -1,7 +1,7 @@
 package co.grandcircus.movie.APICapstone;
 
 
-
+// API service, handles information output based on parameters given
 
 import java.util.List;
 
@@ -16,7 +16,8 @@ public class MovieApiService {
 	private String key;
 			
 	private RestTemplate rest = new RestTemplate();
-		
+	
+	// Method to determine how to filter search
 	public List<Movie> getSearch (String search, String year, String type) {
 		if ((year == null || year.isEmpty()) && (type == null || type.isEmpty())) {
 			String url = "http://www.omdbapi.com/?s={search}&apikey={key}";
@@ -38,6 +39,7 @@ public class MovieApiService {
 		
 	}
 	
+	// Method to pull movie description from API
 	public Movie getMoreInfo (String title) {
 		String url = "http://www.omdbapi.com/?t={title}&apikey={key}";
 		Movie response = rest.getForObject(url, Movie.class, title, key);

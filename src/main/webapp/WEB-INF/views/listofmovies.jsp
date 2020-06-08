@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- View that shows list of movies based on search criteria. Also contains nav bar to watchlist and home -->
 <meta charset="ISO-8859-1">
 <title>Search by Title</title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -14,9 +15,7 @@
 			<li class="nav-item">
 			<a class="nav-link" href="/watchlist">My Watchlist</a>
 			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="/">Login</a>
-			</li>
+			
 			<li class="nav-item">
 			<a class="nav-link" href="/logout">Logout</a>
 			</li>
@@ -58,6 +57,7 @@
 		<h2>Back to Home</h2>
 		<a class="btn btn-secondary" href="/">Go</a>
 </div>
+<!-- Alerts user that they have added a movie to watchlist -->
 <script>
 function myMovieAlert(){
 		alert("Movie Successfully Added!");

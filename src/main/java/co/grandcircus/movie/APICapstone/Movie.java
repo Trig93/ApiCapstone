@@ -9,6 +9,8 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
+// Movie POJO/Table
 @Entity
 @Table(name = "movies")
 public class Movie {
@@ -24,7 +26,7 @@ public class Movie {
 	private String type;
 	@JsonProperty(value = "Plot")
 	private String info;
-	@ManyToOne
+	@ManyToOne // This annotation links this table with the user table
 	private User user;
 	
 	public User getUser() {

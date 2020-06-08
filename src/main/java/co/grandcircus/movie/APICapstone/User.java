@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+// User POJO/Table
 @Entity
 @Table (name = "movie_user")
 public class User {

@@ -2,10 +2,10 @@
     pageEncoding="ISO-8859-1"%>
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-     
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Home Page view, contains search bar as well as navigation links to watchlist and logout -->
 <meta charset="ISO-8859-1">
 <title>Home</title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -16,9 +16,7 @@
 			<li class="nav-item">
 			<a class="nav-link" href="/watchlist">My Watchlist</a>
 			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="/">Login</a>
-			</li>
+			
 			<li class="nav-item">
 			<a class="nav-link" href="/logout">Logout</a>
 			</li>
