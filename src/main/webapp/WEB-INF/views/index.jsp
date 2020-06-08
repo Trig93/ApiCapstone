@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -9,7 +9,6 @@
 <meta charset="ISO-8859-1">
 <title>Home</title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
 </head>
 <body>
 	<nav class="navbar bg-light">
@@ -36,7 +35,11 @@
 		<label>Year:</label>
 		<input type="text" name="year" />
 		<label>Type:</label>
-		<input type="text" name="type">
+		<select name="type">
+			<option>Movie</option>
+			<option>Series</option>
+			<option>Episode</option>
+		</select>
 		<button class="btn btn-secondary">Submit</button>
 		</form>
 		
