@@ -16,10 +16,18 @@
 	<main class="container">
 
 		<article class="card mx-auto">
+			<section class="card-header">
+
+				<h4>
+					<c:out value="${message}" />
+				</h4>
+
+			</section>
 
 			<section class="card-body">
+				
 
-				<form action="/signup/submit">
+				<form action="/signup/submit" method = "post">
 
 					<div class="form-group">
 						<label>Email</label> <input class="form-control"

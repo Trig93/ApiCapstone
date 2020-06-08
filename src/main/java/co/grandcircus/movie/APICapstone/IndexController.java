@@ -110,17 +110,21 @@ public class IndexController {
 	}
 	@RequestMapping("/signup") // Sign-up page, prompts user to make account
 	public String signUpForm() {
-		
 		return "signup-form";
 	}
 	
 	
 	@RequestMapping("/signup/submit") // Saves info to database
-	public String signUpSubmit(User user) {
-				
-		userRepo.save(user);
-		
-		return "redirect:/";
+	public String signUpSubmit(Model model, User user) {
+		User userCheck = userRepo.findByEmail(user.getEmail());
+		if (userCheck != null) {
+			model.addAttribute("message", "Email already in use. Please try again.");
+			return "signup-form";
+		}
+		else {
+			userRepo.save(user);
+			return "redirect:/";
+		}
 	}
 	
 	@RequestMapping("/logout") // Logs out current user
