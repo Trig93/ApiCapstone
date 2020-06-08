@@ -31,7 +31,7 @@
 					 			<input type="hidden" name = "title" value = "${movie.title}"/>
 					 			<input type="hidden" name = "year" value = "${movie.year}"/>
 					 			<input type="hidden" name = "type" value = "${movie.type}"/>
-					 			<button class="btn btn-secondary">Add to Watch List</button>		
+					 			<button class="btn btn-secondary" onclick="myMovieAlert()">Add to Watch List</button>		
 					 		</form>
 						</td>
 					 	<td><a class="btn btn-secondary" href="/moreinfo?title=${movie.title}">More Info</a>
@@ -44,5 +44,10 @@
 		<h2>Back to Home</h2>
 		<a class="btn btn-secondary" href="/">Go</a>
 </div>
+<script>
+function myMovieAlert(){
+		alert("Movie Successfully Added!");
+}
+</script>
 </body>
 </html>

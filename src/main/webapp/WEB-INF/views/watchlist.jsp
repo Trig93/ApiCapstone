@@ -30,7 +30,7 @@
 				 	<td><c:out value="${ movie.title }"/></td>
 				 	<td><c:out value="${ movie.year }"/></td>
 				 	<td><c:out value="${ movie.type }"/></td>
-				 	<td><a class="btn btn-danger" href = "/watchlist/remove/${ movie.id }">Remove</a>
+				 	<td><a class="btn btn-danger" onclick="myRemoveAlert()" href = "/watchlist/remove/${ movie.id }">Remove</a>
 				 	<td><a class="btn btn-secondary" href="/moreinfo?title=${movie.title}">More Info</a>
 			    </tr>	
 			</c:forEach>
@@ -39,6 +39,11 @@
 		<h2>Back to Home</h2>
 		<a class="btn btn-secondary" href="/">Go</a>
 	</div>
-
+<script>
+function myRemoveAlert(){
+	var txt;
+	var r = confirm("Are you sure you wish to remove this movie from your watchlist?");
+}
+</script>
 </body>
 </html>
