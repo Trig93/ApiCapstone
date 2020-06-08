@@ -41,8 +41,7 @@
 	</div>
 <script>
 function myRemoveAlert(){
-	var txt;
-	var r = confirm("Are you sure you wish to remove this movie from your watchlist?");
+	alert ("You are removing this movie from your watchlist");
 }
 </script>
 </body>
